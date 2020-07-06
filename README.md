@@ -42,12 +42,11 @@ sudo nano /etc/thingsboard/conf/thingsboard.conf
 Copiar al portapapeles
 Localice el siguiente bloque de configuración:
 
-# License secret obtained from ThingsBoard License Portal (https://license.thingsboard.io)
 # UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
 # export TB_LICENSE_SECRET=
 y pon tu licencia en secreto. No olvides descomentar la declaración de exportación. Ver ejemplo a continuación:
 
-# License secret obtained from ThingsBoard License Portal (https://license.thingsboard.io)
+
 # UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
 export TB_LICENSE_SECRET=YOUR_LICENSE_SECRET_HERE
 Paso 4. Configurar la base de datos de ThingsBoard
@@ -111,6 +110,7 @@ export SPRING_DATASOURCE_USERNAME=postgres
 export SPRING_DATASOURCE_PASSWORD=PUT_YOUR_POSTGRESQL_PASSWORD_HERE
 export SPRING_DATASOURCE_MAXIMUM_POOL_SIZE=5
 # Specify partitioning size for timestamp key-value storage. Allowed values: DAYS, MONTHS, YEARS, INDEFINITE.
+
 export SQL_POSTGRES_TS_KV_PARTITIONING=MONTHS
 
 
@@ -118,6 +118,7 @@ Ejecute el script de instalación
 Una vez que se instala el servicio ThingsBoard y se actualiza la configuración de la base de datos, puede ejecutar el siguiente script:
 
 # --loadDemo option will load demo data: users, devices, assets, rules, widgets.
+
 sudo /usr/share/thingsboard/bin/install/install.sh --loadDemo
 Copiar al portapapeles
 Paso 8. Inicie el servicio de ThingsBoard
