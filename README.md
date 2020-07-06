@@ -42,12 +42,12 @@ sudo nano /etc/thingsboard/conf/thingsboard.conf
 Copiar al portapapeles
 Localice el siguiente bloque de configuración:
 
-# UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
-# export TB_LICENSE_SECRET=
+UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
+export TB_LICENSE_SECRET=
 y pon tu licencia en secreto. No olvides descomentar la declaración de exportación. Ver ejemplo a continuación:
 
 
-# UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
+UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
 export TB_LICENSE_SECRET=YOUR_LICENSE_SECRET_HERE
 Paso 4. Configurar la base de datos de ThingsBoard
 ThingsBoard puede utilizar el enfoque de base de datos híbrida o SQL. Vea la página de arquitectura correspondiente para más detalles.
@@ -70,14 +70,14 @@ Las instrucciones enumeradas a continuación lo ayudarán a instalar PostgreSQL.
  install ** wget** if not already installed:
 sudo apt install -y wget
 
-#i mport the repository signing key:
+i mport the repository signing key:
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 
-#add repository contents to your system:
+add repository contents to your system:
 RELEASE=$(lsb_release -cs)
 echo "deb http://apt.postgresql.org/pub/repos/apt/ ${RELEASE}"-pgdg main | sudo tee  /etc/apt/sources.list.d/pgdg.list
 
-#install and launch the postgresql service:
+install and launch the postgresql service:
 sudo apt update
 sudo apt -y install postgresql-12
 sudo service postgresql start
@@ -109,7 +109,7 @@ export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/thingsboard
 export SPRING_DATASOURCE_USERNAME=postgres
 export SPRING_DATASOURCE_PASSWORD=PUT_YOUR_POSTGRESQL_PASSWORD_HERE
 export SPRING_DATASOURCE_MAXIMUM_POOL_SIZE=5
-#Specify partitioning size for timestamp key-value storage. Allowed values: DAYS, MONTHS, YEARS, INDEFINITE.
+Specify partitioning size for timestamp key-value storage. Allowed values: DAYS, MONTHS, YEARS, INDEFINITE.
 
 export SQL_POSTGRES_TS_KV_PARTITIONING=MONTHS
 
@@ -117,7 +117,7 @@ export SQL_POSTGRES_TS_KV_PARTITIONING=MONTHS
 Ejecute el script de instalación
 Una vez que se instala el servicio ThingsBoard y se actualiza la configuración de la base de datos, puede ejecutar el siguiente script:
 
-#--loadDemo option will load demo data: users, devices, assets, rules, widgets.
+--loadDemo option will load demo data: users, devices, assets, rules, widgets.
 
 sudo /usr/share/thingsboard/bin/install/install.sh --loadDemo
 Copiar al portapapeles
