@@ -3,7 +3,7 @@ Rastreabilidad Golchcain
 
 
 Prerrequisitos
-Esta guía describe cómo instalar ThingsBoard en Ubuntu Server 18.04 LTS. Los requisitos de hardware dependen de la base de datos elegida y la cantidad de dispositivos conectados al sistema. Para ejecutar ThingsBoard y PostgreSQL en una sola máquina, necesitará al menos 1 Gb de RAM. Para ejecutar ThingsBoard y Cassandra en una sola máquina, necesitará al menos 8 Gb de RAM.
+Esta guía describe cómo instalar Golchain en Ubuntu Server 18.04 LTS. Los requisitos de hardware dependen de la base de datos elegida y la cantidad de dispositivos conectados al sistema. Para ejecutar ThingsBoard y PostgreSQL en una sola máquina, necesitará al menos 1 Gb de RAM. Para ejecutar Golchain y Cassandra en una sola máquina, necesitará al menos 8 Gb de RAM.
 
 Paso 1. Instalar Java 8 (OpenJDK)
 El servicio ThingsBoard se ejecuta en Java 8. Siga estas instrucciones para instalar OpenJDK 8:
